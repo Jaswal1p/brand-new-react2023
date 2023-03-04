@@ -4,6 +4,7 @@ import './App.css';
 import { Greet } from './components/Greet';
 import { Message } from './components/Message';
 import { ClickHandler } from './components/ClickHandler';
+import { Parent } from './components/Parent';
 
 // function App() {
 //   return (
@@ -44,6 +45,8 @@ function App() {
       <Message />
       
       <ClickHandler />
+
+      <Parent />
     </div>
   );
 }
