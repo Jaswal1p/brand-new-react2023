@@ -1,5 +1,5 @@
 
-export const Greet = () => {
+function Greet() {
 
     return <hi>Hello React World</hi>;
 
