@@ -29,9 +29,15 @@ import { Greet } from './components/Greet';
 function App() {
   return (
     <div className="App">
-      <Greet name='Bobby' likesFood='Apple'></Greet>
-      <Greet name='Jack' likesFood='Mango'></Greet>
-      <Greet name='Kim' likesFood='Grapes'></Greet>
+      <Greet name='Bobby' likesFood='Apple'>
+        <a href="https://yahoo.com">Yahoo</a>
+      </Greet>
+      <Greet name='Jack' likesFood='Mango'>
+        <button>Submit</button>
+      </Greet>
+      <Greet name='Kim' likesFood='Grapes'>
+        <p>This is children props</p>
+      </Greet>
     </div>
   );
 }
