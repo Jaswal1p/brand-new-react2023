@@ -5,6 +5,7 @@ import { Greet } from './components/Greet';
 import { Message } from './components/Message';
 import { ClickHandler } from './components/ClickHandler';
 import { Parent } from './components/Parent';
+import { UserGreeting } from './components/UserGreeting';
 
 // function App() {
 //   return (
@@ -47,6 +48,8 @@ function App() {
       <ClickHandler />
 
       <Parent />
+
+      <UserGreeting />
     </div>
   );
 }
