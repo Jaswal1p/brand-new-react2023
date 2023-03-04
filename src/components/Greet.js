@@ -1,7 +1,7 @@
 
-export const Greet = () => {
+export const Greet = (props) => {
 
-    return <h1>Hello React World</h1>;
+    return <h1>Hello {props.name}</h1>;
 
 }
 
