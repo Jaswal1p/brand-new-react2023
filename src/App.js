@@ -3,6 +3,7 @@
 import './App.css';
 import { Greet } from './components/Greet';
 import { Message } from './components/Message';
+import { ClickHandler } from './components/ClickHandler';
 
 // function App() {
 //   return (
@@ -41,6 +42,8 @@ function App() {
       </Greet>
       
       <Message />
+      
+      <ClickHandler />
     </div>
   );
 }
