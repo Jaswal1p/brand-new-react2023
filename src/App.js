@@ -2,6 +2,7 @@
 
 import './App.css';
 import { Greet } from './components/Greet';
+import { Message } from './components/Message';
 
 // function App() {
 //   return (
@@ -38,6 +39,8 @@ function App() {
       <Greet name='Kim' likesFood='Grapes'>
         <p>This is children props</p>
       </Greet>
+      
+      <Message />
     </div>
   );
 }
