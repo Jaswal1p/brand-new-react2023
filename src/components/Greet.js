@@ -1,7 +1,7 @@
 
-function Greet() {
+const Greet = () => {
 
-    return <hi>Hello React World</hi>;
+    return <h1>Hello React World</h1>;
 
 }
 
