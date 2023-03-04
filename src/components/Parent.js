@@ -1,9 +1,11 @@
 import {Child} from './Child';
 
 export const Parent = () => {
-    const greetParent = () => {
-        console.log('Hello Parent');
-        alert('Hello Parent');
+    const greetParent = (childName) => {
+        console.log(`Hello Parent ${childName}`);
+
+        alert(`Hello Parent ${childName}`);
+
         
     }
 
