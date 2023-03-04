@@ -29,9 +29,9 @@ import { Greet } from './components/Greet';
 function App() {
   return (
     <div className="App">
-      <Greet name='Bobby'></Greet>
-      <Greet name='Jack'></Greet>
-      <Greet name='Kim'></Greet>
+      <Greet name='Bobby' likesFood='Apple'></Greet>
+      <Greet name='Jack' likesFood='Mango'></Greet>
+      <Greet name='Kim' likesFood='Grapes'></Greet>
     </div>
   );
 }
