@@ -1,7 +1,7 @@
 export const ClickHandler = () => {
     const clickHandler = (e, count =1) => {
         console.log('You clicked me!', count, e);
-        // alert('You clicked me!');
+        alert('You clicked me!');
         
     }
    return (

@@ -6,6 +6,7 @@ import { Message } from './components/Message';
 import { ClickHandler } from './components/ClickHandler';
 import { Parent } from './components/Parent';
 import { UserGreeting } from './components/UserGreeting';
+import { NameList } from './components/NameList';
 
 // function App() {
 //   return (
@@ -50,6 +51,8 @@ function App() {
       <Parent />
 
       <UserGreeting />
+
+      <NameList />
     </div>
   );
 }
