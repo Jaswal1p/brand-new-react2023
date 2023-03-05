@@ -12,6 +12,7 @@ import { Inline } from './components/Inline';
 import './appStyles.css';
 import styles from './appStyles.module.css';
 import { Form } from './components/Form';
+import { PostList } from './components/PostList';
 
 // function App() {
 //   return (
@@ -66,6 +67,8 @@ function App() {
       <h1 className={styles.success}>Success</h1>
 
       <Form />
+
+      < PostList />
     </div>
   );
 }
