@@ -15,6 +15,9 @@ import { Form } from './components/Form';
 import { PostList } from './components/PostList';
 import { PostForm } from './components/PostForm';
 
+import NAMES from './components/data.json';
+import { useState } from 'react';
+
 // function App() {
 //   return (
 //     <div className="App">
@@ -39,6 +42,16 @@ import { PostForm } from './components/PostForm';
 
 
 function App() {
+
+  const [query, setQuery] = useState('');
+  
+  const changeHandler = (e) => {
+    setQuery(e.target.value);
+  }
+  const filteredNames = NAMES.filter(item => {
+    return item.first_name.includes(query) || item.last_name.includes(query);
+  })
+
   return (
     <div className="App">
       <Greet name='Bobby' likesFood='Apple'>
@@ -72,6 +85,15 @@ function App() {
       < PostList />
 
       <PostForm />
+
+      <input type="text" value={query} onChange={changeHandler} />
+      {
+        filteredNames.map((item) => (
+          <p key={item.id}>
+            {item.first_name} {item.last_name}
+          </p>
+        ))
+      }
     </div>
   );
 }
