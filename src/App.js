@@ -13,6 +13,7 @@ import './appStyles.css';
 import styles from './appStyles.module.css';
 import { Form } from './components/Form';
 import { PostList } from './components/PostList';
+import { PostForm } from './components/PostForm';
 
 // function App() {
 //   return (
@@ -69,6 +70,8 @@ function App() {
       <Form />
 
       < PostList />
+
+      <PostForm />
     </div>
   );
 }
