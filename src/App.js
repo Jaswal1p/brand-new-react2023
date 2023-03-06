@@ -16,7 +16,7 @@ import { PostList } from './components/PostList';
 import { PostForm } from './components/PostForm';
 
 import NAMES from './components/data.json';
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 
 // function App() {
 //   return (
@@ -44,8 +44,12 @@ import { useState } from 'react';
 function App() {
 
   const [query, setQuery] = useState('');
+  const [inputValue, setInputValue] = useState('');
+  const[isPending, startTransition] = useTransition()
+
   const changeHandler = (e) => {
-    setQuery(e.target.value);
+    setInputValue(e.target.value);
+    startTransition(() => setQuery(e.target.value));
   }
   const filteredNames = NAMES.filter(item => {
     return item.first_name.includes(query) || item.last_name.includes(query);
@@ -85,9 +89,9 @@ function App() {
 
       <PostForm />
 
-      <input type="text" value={query} onChange={changeHandler} />
-      {
-        filteredNames.map((item) => (
+      <input type="text" value={inputValue} onChange={changeHandler} />
+      {isPending && <p>Loading...</p>}
+      {filteredNames.map((item) => (
           <p key={item.id}>
             {item.first_name} {item.last_name}
           </p>
