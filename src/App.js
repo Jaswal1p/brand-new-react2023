@@ -44,7 +44,6 @@ import { useState } from 'react';
 function App() {
 
   const [query, setQuery] = useState('');
-  
   const changeHandler = (e) => {
     setQuery(e.target.value);
   }
